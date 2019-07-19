@@ -322,10 +322,14 @@ span.thick {
 		min-width: 280px;
 	}
 	
-	#name, #contactDetails {
+	/* #name, #contactDetails {
 		float: none;
 		width: 100%;
-		text-align: center;
+		/* text-align: center; */
+	} */
+
+	#name h1 {
+		padding-bottom: 2px;
 	}
 	
 	.sectionTitle, .sectionContent {

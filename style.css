@@ -18,33 +18,6 @@ html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-ser
   zoom: 1.0 ;
 }
 
-/* code that is here, until the first @media block, will apply to any screen size */
-#somethingorother {
-  width: 800px ;
-}
-
-@media screen and (max-width: 320px) {
-  /* comes into effect for screens less than or equal to 320 pixels */
-  #somethingorother {
-    width: 120px ;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 480px) {
-  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
-  #somethingorother {
-    width: 320px ;
-  }
-}
-@media screen and (min-width: 481px) {
-  /* comes into effect for screens larger than or equal to 481 pixels */
-  #somethingorother {
-    width: 480px ;
-  }
-}
-
-/* code that is here will apply to any screen size */
-
-
 .clear {clear: both;}
 
 p {
@@ -72,6 +45,7 @@ p {
 	font-weight: 700;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	margin-bottom: -6px;
+	padding-bottom: 10px;
 }
 
 #name h2 {
@@ -189,84 +163,6 @@ section:last-child {
 
 .keySkills ul li {
 	margin-bottom: 3px;
-}
-
-@media all and (min-width: 602px) and (max-width: 800px) {
-	#headshot {
-		display: none;
-	}
-	
-	.keySkills {
-	-moz-column-count:2;
-	-webkit-column-count:2;
-	column-count:2;
-	}
-}
-
-@media all and (max-width: 601px) {
-	#cv {
-		width: 95%;
-		margin: 10px auto;
-		min-width: 280px;
-	}
-	
-	#headshot {
-		display: none;
-	}
-	
-	#name, #contactDetails {
-		float: none;
-		width: 100%;
-		text-align: center;
-	}
-	
-	.sectionTitle, .sectionContent {
-		float: none;
-		width: 100%;
-	}
-	
-	.sectionTitle {
-		margin-left: -2px;
-		font-size: 1.25em;
-	}
-	
-	.keySkills {
-		-moz-column-count:2;
-		-webkit-column-count:2;
-		column-count:2;
-	}
-}
-
-@media all and (max-width: 480px) {
-	.mainDetails {
-		padding: 15px 15px;
-	}
-	
-	section {
-		padding: 15px 0 0;
-	}
-	
-	#mainArea {
-		padding: 0 25px;
-	}
-
-	
-	.keySkills {
-	-moz-column-count:1;
-	-webkit-column-count:1;
-	column-count:1;
-	}
-	
-	#name h1 {
-		line-height: .8em;
-		margin-bottom: 4px;
-	}
-}
-
-@media print {
-    #cv {
-        width: 100%;
-    }
 }
 
 @-webkit-keyframes reset {
@@ -397,3 +293,93 @@ span.thick {
 .achli {
 	padding-bottom: 3%
 }
+
+/* code that is here, until the first @media block, will apply to any screen size */
+
+@media all and (min-width: 602px) and (max-width: 800px) {
+	body {
+		width: calc( 100% - 1px );
+		font-size: 10px;
+	}
+
+	.keySkills {
+	-moz-column-count:2;
+	-webkit-column-count:2;
+	column-count:2;
+	}
+}
+
+@media all and (max-width: 601px) {
+
+	body {
+		width: calc( 100% - 1px );
+		font-size: 10px;
+	}
+
+	#cv {
+		width: 95%;
+		margin: 10px auto;
+		min-width: 280px;
+	}
+	
+	#name, #contactDetails {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.sectionTitle, .sectionContent {
+		float: none;
+		width: 100%;
+	}
+	
+	.sectionTitle {
+		margin-left: -2px;
+		font-size: 1.25em;
+	}
+	
+	.keySkills {
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+	}
+}
+
+@media all and (max-width: 480px) {
+
+	body {
+		width: calc( 100% - 1px );
+		font-size: 8px;
+	}
+
+	.mainDetails {
+		padding: 15px 15px;
+	}
+	
+	section {
+		padding: 15px 0 0;
+	}
+	
+	#mainArea {
+		padding: 0 25px;
+	}
+	
+	#name h1 {
+		line-height: .8em;
+		margin-bottom: 4px;
+	}
+
+	.keySkills {
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+	}
+}
+
+@media print {
+    #cv {
+        width: 100%;
+    }
+}
+  
+  /* code that is here will apply to any screen size */
